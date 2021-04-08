@@ -7,6 +7,7 @@ class PagesController < ApplicationController
         @day = @today.day
         @month = @today.month
         @year = @today.year
+        @bday = Bday.new
 
     end
 end

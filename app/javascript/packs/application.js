@@ -17,7 +17,8 @@ ActiveStorage.start()
 console.log("Hello from app/javascript/packs/application.js!");
 import { initSweetalert } from '../plugins/init_sweetalert';
 
-initSweetalert('#sub-birth', {
+/* test de javascript sur les formulaires */
+/* initSweetalert('#sub-birth', {
   title: "A nice alert",
   text: "This is a great alert, isn't it?",
   icon: "success"
@@ -50,4 +51,4 @@ form2.addEventListener("submit", (event) => {
   console.log(age_form);
   result.insertAdjacentHTML("beforeend", `Your Name is ${fn_form}` );
   result.insertAdjacentHTML("beforeend", `Your age is ${age_form}` );
-});
+}); */

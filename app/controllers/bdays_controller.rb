@@ -10,7 +10,7 @@ class BdaysController < ApplicationController
   def create
     @bday = Bday.new(bday_params)
     if @bday.save
-      redirect_to root_path
+      redirect_to bday_path(@bday)
     else
       render :new
     end

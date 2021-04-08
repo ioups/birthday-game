@@ -1,43 +1,18 @@
 
 <div class="container">
-    <div><h1>Home Page</h1></div>
+    <div><h1>Home Page</h1>
+    </div>
     <div>
         
         <p> Welcome to the : is it your Birthday ? game ! </p>
         <p> Today is : <%= @day %> / <%= @month %> / <%= @year %> </p>
         <p> Today is : <%= @today_home %> </p>
     </div>
-    <div class="form">
-        <%= simple_form_for :GO, html: {id: "BlaBla"}, url: root_path, method: :get do |f| %>
-        <div class="search-form-control form-group">
-        <%= f.input :name, label: "Name", class: 'form-control string required' %>
-           <%= f.input :date_of_birth, as: :date, start_year: Date.today.year - 120,
-                              end_year: Date.today.year, discard_day: false,
-                              order: [:day, :month, :year] %>
-            <%= f.button :submit, html: {id: "age2"}, class: 'btn btn-flat', value: "Go", name: "allez la"%>
-        </div>
-        <% end %>
-    </div>
 
     <div>
-        <form id="new_birthday"> <!-- No need for action or method attributes  -->
-            <input type="text" id="firstnam" placeholder="Firstname">
-            <input type="date" id="birthdat" value="1900-01-01">
-            <input type="submit" id="sub-birth" value="check your birthday">
-        </form>
-    </div>
-    <br>
-    
-    <div>
-        <form id="new_test_form"> <!-- No need for action or method attributes  -->
-            <input type="text" id="firstname" placeholder="Firstname">
-            <input type="date" id="birthdate" value="1900-01-01">
-            <input type="submit" id="sub-new" value="check your birthday">
-        </form>
+        <%= render "bdays/new" %>
     </div>
 
-    <div class="results">
-    
-    </div>
 </div>
+
 
