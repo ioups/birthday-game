@@ -6,15 +6,16 @@ class BdaysController < ApplicationController
   end
 
   def index
-    @bday = Bday.all
+    @bdays = Bday.all
   end
 
   def create
+    @bdays = Bday.all
     @bday = Bday.new(bday_params)
     if @bday.save
       redirect_to bday_path(@bday)
     else
-      render :new
+      render "pages/home"
     end
   end
 

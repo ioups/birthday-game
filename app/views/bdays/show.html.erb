@@ -8,7 +8,7 @@
     <p> your next birthday is <%= @updated_bday.strftime("%d %B %Y") %> </p> 
 
     <% if @today.day == @bday.birth_date.day && @today.month == @bday.birth_date.month %>
-        <p>Happy Bithday <%= @bday.name %> !! you are <% @today.year - @bday.birth_date.year %> } years old, nice ! </p>  
+        <p>Happy Bithday <%= @bday.name %> !! you are <%= @today.year - @bday.birth_date.year %>  years old, nice ! </p>  
     <% else %>
             <p>Too bad <%= @bday.name %>, it's not your birthday untill <%= @days_untill_birthday  %> days</p> 
     <% end %>  

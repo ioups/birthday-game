@@ -1,16 +1,18 @@
 
 <div class="container">
-    <div><h1>Home Page</h1>
+    <div><h1>Welcome ! is it your Birthday ? </h1>
     </div>
     <div>
-        
-        <p> Welcome to the : is it your Birthday ? game ! </p>
-        <p> Today is : <%= @day %> / <%= @month %> / <%= @year %> </p>
+        <h2> Let's find out !</h2>
         <p> Today is : <%= @today_home %> </p>
     </div>
 
     <div>
         <%= render "bdays/new" %>
+    </div>
+
+    <div>
+    <%= @bdays.count %> Queries so far !
     </div>
 
 </div>
