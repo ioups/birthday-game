@@ -11,4 +11,13 @@ class PagesController < ApplicationController
         @bdays = Bday.all
 
     end
+
+    def railsmd
+        @bday = Bday.new
+        @bdays = Bday.all
+    end
+
+    def jsmd
+    end
+
 end

@@ -1,18 +1,15 @@
 
 <div class="container">
-    <div><h1>Welcome ! is it your Birthday ? </h1>
+    <div class="mt-3">
+    <h1>Welcome ! is it your Birthday ? </h1>
     </div>
     <div>
         <h2> Let's find out !</h2>
         <p> Today is : <%= @today_home %> </p>
-    </div>
 
-    <div>
-        <%= render "bdays/new" %>
-    </div>
-
-    <div>
-    <%= @bdays.count %> Queries so far !
+        <%= link_to "rails method", railsmd_path, class: "btn btn-primary" %> 
+        <%= link_to "JS method", jsmd_path, class: "btn btn-secondary" %> 
+       
     </div>
 
 </div>
