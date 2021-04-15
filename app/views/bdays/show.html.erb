@@ -1,17 +1,17 @@
 <div class="container">
     <h1> this is the show page</h1>
 
-    <p> Hey <%= @bday.name %> </p> 
+    <p> Hey <%= @bday.name %> </p>
 
-    <p> you are born on <%= @bday.birth_date.strftime("%d %B %Y") %> </p> 
+    <p> you are born on <%= @bday.birth_date.strftime("%d %B %Y") %> </p>
 
-    <p> your next birthday is <%= @updated_bday.strftime("%d %B %Y") %> </p> 
+    <p> your next birthday is <%= @updated_bday.strftime("%d %B %Y") %> </p>
 
     <% if @today.day == @bday.birth_date.day && @today.month == @bday.birth_date.month %>
-        <p>Happy Bithday <%= @bday.name %> !! you are <%= @today.year - @bday.birth_date.year %>  years old, nice ! </p>  
+        <p>Happy Bithday <%= @bday.name %> !! you are <%= @today.year - @bday.birth_date.year %>  years old, nice ! </p>
     <% else %>
-            <p>Too bad <%= @bday.name %>, it's not your birthday untill <%= @days_untill_birthday  %> days</p> 
-    <% end %>  
+            <p>Too bad <%= @bday.name %>, it's not your birthday untill <%= @days_untill_birthday  %> days</p>
+    <% end %>
     <div>
     <%= link_to "Home page", root_path %>
     </div>
